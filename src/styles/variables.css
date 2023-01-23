@@ -1,0 +1,25 @@
+:root {
+  /* color */
+  --color-white: #FFFFFF;
+  --color-black: #242424;
+  --color-black-50: rgba(36, 36, 36, 0.5);
+  --color-soft-black: #565656;
+
+  /* position */
+  --z-index-modal: 99999;
+  --z-index-modal-overlay: 1;
+  --z-index-modal-container: 2;
+  --modal-top: 44px;
+
+  /* rounded */
+  --rounded-radius: 16px;
+
+  /* size */
+  --modal-close-button-size: 24px;
+  --scroll-width-size: 17px;
+
+  /* spacing */
+  --modal-y-padding: 16px;
+  --modal-x-padding: 20px;
+  --modal-body-y-padding: 8px;
+}

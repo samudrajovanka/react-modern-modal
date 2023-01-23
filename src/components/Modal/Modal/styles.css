@@ -1,0 +1,112 @@
+/* ! modal */
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-index-modal);
+}
+
+body:has(.modal[data-open="true"]) {
+  overflow: hidden;
+  margin-right: var(--scroll-width-size);
+}
+/* end of modal */
+
+/* ! modal overlay */
+.modal__overlay {
+  position: fixed;
+  inset: 0;
+  background-color: var(--color-black-50);
+  z-index: var(--z-index-modal-overlay);
+}
+
+.modal__overlay--blur {
+  backdrop-filter: blur(2px);
+}
+/* end of modal overlay */
+
+/* ! modal container */
+.modal__container {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: var(--z-index-modal-container);
+  overflow-y: auto;
+}
+
+/* ! modal container scroll behaviour */
+.modal__container--scroll-outside {
+  align-items: flex-start;
+  padding-block: var(--modal-top);
+}
+/* end of modal container scroll behaviour */
+/* end of modal container */
+
+/* ! modal content */
+.modal__content {
+  position: relative;
+  background-color: var(--color-white);
+  width: calc(100% - 32px);
+  border-radius: var(--rounded-radius);
+  overflow: hidden;
+  animation: fade 0.3s;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* ! modal content position */
+.modal:has(.modal__content--top) .modal__container {
+  align-items: flex-start;
+}
+
+.modal__content--top {
+  margin-top: var(--modal-top);
+}
+/* end of modal content position */
+
+/* ! modal container size */
+.modal__content--sm {
+  max-width: 350px;
+}
+
+.modal__content--md {
+  max-width: 500px;
+}
+
+.modal__content--lg {
+  max-width: 800px;
+}
+
+.modal__content--fullscreen {
+  width: 100vw;
+  height: 100vh;
+  border-radius: 0;
+}
+
+.modal:has(.modal__content--fullscreen):has(.modal__container--scroll-outside)
+.modal__container--scroll-outside {
+  padding-block: 0;
+}
+/* end of modal content size */
+/* end of modal content */
+
+/* ! modal close button */
+.modal__close-button {
+  padding: 0;
+  width: var(--modal-close-button-size);
+  height: var(--modal-close-button-size);
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.modal__close-button--position {
+  position: absolute;
+  right: 20px;
+  top: 16px;
+  color: var(--color-soft-black);
+}
+/* end of modal close button */

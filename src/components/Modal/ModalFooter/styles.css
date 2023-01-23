@@ -1,0 +1,27 @@
+/* ! modal footer */
+.modal__footer {
+  padding: var(--modal-y-padding) var(--modal-x-padding);
+  display: flex;
+  gap: 8px;
+}
+
+/* ! modal justify position */
+.modal__footer--start {
+  justify-content: flex-start;
+}
+
+.modal__footer--center {
+  justify-content: center;
+}
+
+.modal__footer--end {
+  justify-content: flex-end;
+}
+/* end of modal justify position */
+
+/* ! modal footer when no padding */
+.modal[data-no-padding="true"] .modal__footer {
+  padding: 0;
+}
+/* end of modal footer when no padding */
+/* end of modal footer */

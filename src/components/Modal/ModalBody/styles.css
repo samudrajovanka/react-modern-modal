@@ -1,0 +1,45 @@
+/* ! modal body */
+.modal__body {
+  padding: var(--modal-body-y-padding) var(--modal-x-padding);
+  flex: 1 1 100%;
+}
+
+/* ! modal body when content scroll inside */
+.modal:has(.modal__container--scroll-inside) .modal__body {
+  overflow-y: auto;
+  max-height: 350px;
+}
+/* end of modal body when content scroll inside */
+
+/* ! modal body when content fullscreen or scroll outside */
+.modal:has(.modal__content--fullscreen) .modal__body,
+.modal:has(.modal__container--scroll-outside) .modal__body {
+  max-height: max-content;
+}
+/* end of modal body when content fullscreen or scroll outside */
+
+/* ! modal body when no padding */
+.modal[data-no-padding="true"] .modal__body,
+.modal[data-no-padding="true"]:is(
+  .modal:has(.modal__close-button):not(:has(.modal__header)),
+  .modal:not(:has(.modal__header)):not(:has(.modal__close-button)),
+  .modal:not(:has(.modal__footer))
+) .modal__body {
+  padding: 0;
+}
+/* end of modal body when no padding */
+
+/* ! modal body padding */
+.modal:has(.modal__close-button):not(:has(.modal__header)) .modal__body {
+  padding-top: calc(var(--modal-y-padding) + var(--scroll-width-size) + 12px);
+}
+
+.modal:not(:has(.modal__header)):not(:has(.modal__close-button)) .modal__body {
+  padding-top: var(--modal-y-padding);
+}
+
+.modal:not(:has(.modal__footer)) .modal__body {
+  padding-bottom: var(--modal-y-padding);
+}
+/* end of modal body padding */
+/* end of modal body */

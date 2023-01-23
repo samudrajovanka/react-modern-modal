@@ -1,0 +1,47 @@
+/* ! modal header */
+.modal__header {
+  padding: var(--modal-y-padding) var(--modal-x-padding);
+  padding-top: calc(var(--modal-y-padding) + var(--modal-close-button-size));
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+
+/* ! modal header triggered with close button */
+.modal:not([data-no-close="true"]) .modal__header {
+  padding-right: calc(var(--modal-x-padding) + var(--modal-close-button-size) + 12px);
+}
+
+.modal[data-no-close="true"] .modal__header {
+  padding-top: var(--modal-y-padding);
+}
+/* end of modal header triggered with close button */
+
+/* ! modal header title position */
+.modal__header--title-pos-top {
+  padding-top: var(--modal-y-padding);
+  text-align: start;
+}
+/* end of modal header title position */
+
+/* ! modal header title alignment */
+.modal__header--title-alg-center {
+  text-align: center;
+}
+
+.modal__header--title-alg-start {
+  text-align: start;
+}
+/* end of modal header title alignment */
+
+/* ! modal header font weight */
+.modal__header--regular {
+  font-weight: 400;
+}
+/* end of modal header font weight */
+
+/* ! modal header when no padding */
+.modal[data-no-padding="true"] .modal__header {
+  padding: 0;
+}
+/* end of modal header when no padding */
+/* end of modal header */
