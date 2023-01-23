@@ -1,0 +1,55 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta title="Home/Installation" />
+
+# React Modern modal
+
+> React Modern Modal is a simple, lightweight, and modern modal component for React.
+
+## Installation
+
+```bash
+npm install --save react-modern-modal
+yarn add react-modern-modal
+```
+
+## Usage
+
+Simple use `react-modern-modal` on your react app
+
+```tsx
+import React, { useState } from 'react';
+import { Modal, ModalBody, ModalFooter, ModalHeader } from 'react-modern-modal';
+
+const App = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleOpen = () => setIsOpen(true);
+  const handleClose = () => setIsOpen(false);
+
+  return (
+    <>
+      <button onClick={handleOpen}>Open Modal</button>
+
+      <Modal isOpen={isOpen} onClose={handleClose}>
+        <ModalHeader>Modal Title</ModalHeader>
+        <ModalBody>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione,
+          rerum! Atque, molestias. Placeat nemo suscipit ipsa quos cum quo, quas
+          sed obcaecati quidem, cumque aliquam voluptatibus, adipisci sint
+          nesciunt eveniet? Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Exercitationem ipsa, ut hic porro, quidem recusandae pariatur
+          natus quia voluptatum corporis tempora vero alias? Adipisci,
+          exercitationem fugit? Atque amet minus dolores.
+        </ModalBody>
+        <ModalFooter>
+          <button onClick={handleClose}>Close</button>
+          <button onClick={handleClose}>Add</button>
+        </ModalFooter>
+      </Modal>
+    </>
+  );
+}
+
+export default App;
+```

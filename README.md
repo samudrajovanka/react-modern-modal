@@ -63,4 +63,4 @@ You can find more examples in [Component Documentation](#component-documentation
 
 ## Component Documentation
 
-You can see the component documentation [here](#) with list of props and examples.
+You can see the component documentation [here](https://react-modern-modal.netlify.app/?path=/docs/components-modal--modal) with list of props and examples.
