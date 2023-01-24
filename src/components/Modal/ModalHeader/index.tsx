@@ -16,7 +16,7 @@ const ModalHeader: React.FC<ModalHeaderProps> = ({
   return (
     <header
       className={cx('modal__header', {
-        [`modal__header--title-pos-top`]: titlePosition === 'top',
+        [`modal__header--title-pos-${titlePosition}`]: titlePosition,
         [`modal__header--title-alg-${align}`]: align,
         [`modal__header--regular`]: isRegular
       }, className)}
