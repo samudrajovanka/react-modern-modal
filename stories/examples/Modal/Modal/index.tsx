@@ -16,13 +16,15 @@ const ModalExample = (args) => {
       <Modal isOpen={isOpen} onClose={handleClose} {...args}>
         <ModalHeader>Modal Title</ModalHeader>
         <ModalBody>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione,
-          rerum! Atque, molestias. Placeat nemo suscipit ipsa quos cum quo, quas
-          sed obcaecati quidem, cumque aliquam voluptatibus, adipisci sint
-          nesciunt eveniet? Lorem ipsum dolor sit amet consectetur adipisicing
-          elit. Exercitationem ipsa, ut hic porro, quidem recusandae pariatur
-          natus quia voluptatum corporis tempora vero alias? Adipisci,
-          exercitationem fugit? Atque amet minus dolores.
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione,
+            rerum! Atque, molestias. Placeat nemo suscipit ipsa quos cum quo, quas
+            sed obcaecati quidem, cumque aliquam voluptatibus, adipisci sint
+            nesciunt eveniet? Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Exercitationem ipsa, ut hic porro, quidem recusandae pariatur
+            natus quia voluptatum corporis tempora vero alias? Adipisci,
+            exercitationem fugit? Atque amet minus dolores.
+          </p>
         </ModalBody>
         <ModalFooter>
           <Button onClick={handleClose}>Close</Button>
