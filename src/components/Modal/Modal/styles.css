@@ -5,6 +5,10 @@
   z-index: var(--z-index-modal);
 }
 
+.modal :is(h1, h2, h3, h4, h5, h6, p, span) {
+  margin: 0;
+}
+
 body:has(.modal[data-open="true"]) {
   overflow: hidden;
   margin-right: var(--scroll-width-size);
