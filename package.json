@@ -18,7 +18,8 @@
     "size": "size-limit",
     "analyze": "size-limit --why",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "prepublishOnly": "tsdx build"
   },
   "peerDependencies": {
     "react": ">=16"
@@ -59,7 +60,6 @@
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "babel-loader": "^9.1.2",
-    "classnames": "^2.3.2",
     "husky": "^8.0.3",
     "postcss": "^8.4.21",
     "react": "^18.2.0",
@@ -71,7 +71,9 @@
     "tslib": "^2.4.1",
     "typescript": "^4.9.4"
   },
-  "dependencies": {},
+  "dependencies": {
+    "classnames": "^2.3.2"
+  },
   "repository": {
     "type": "git",
     "url": "git@github.com:samudrajovanka/react-modern-modal.git"
