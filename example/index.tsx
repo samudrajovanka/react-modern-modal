@@ -101,16 +101,16 @@ const App = () => {
       <Modal
         isOpen={isOpen}
         onClose={handleCloseModal}
-        // noCloseButton
+        noCloseButton
         // size="lg"
         // noPadding
         scrollBehaviour="inside"
         backdropBlur
         // backdropColor="rgba(252, 186, 3, 0.5)"
         // position="top"
-        preventClose
+        // preventClose
       >
-        <ModalHeader titlePosition="top" align="start">
+        <ModalHeader titlePosition="top">
           <h5>Modal Title So Long Title Modal Long Tiitle Modal</h5>
         </ModalHeader>
         <ModalBody>
