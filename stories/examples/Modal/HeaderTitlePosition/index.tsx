@@ -18,7 +18,10 @@ const ModalExample = (args) => {
   return (
     <>
       <RadioGroup
-        menu={[{ value: 'top' }, { value: 'bottom' }]}
+        menu={[
+          { value: 'top', id: 'top_title_position' },
+          { value: 'bottom', id: 'bottom_title_position' },
+        ]}
         name="titlePosition"
         value={titlePosition}
         handleChange={handleChange}
