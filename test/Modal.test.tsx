@@ -1,5 +1,6 @@
 import React from 'react';
 import * as ReactDOM from 'react-dom';
+
 import { Modal, ModalBody, ModalFooter, ModalHeader } from '../src';
 
 describe('Modal', () => {

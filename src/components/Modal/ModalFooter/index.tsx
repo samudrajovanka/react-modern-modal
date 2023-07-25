@@ -9,7 +9,7 @@ const ModalFooter: React.FC<ModalFooterProps> = ({
   children,
   justify = 'end',
   className,
-  style
+  style,
 }) => {
   return (
     <footer
@@ -19,6 +19,6 @@ const ModalFooter: React.FC<ModalFooterProps> = ({
       {children}
     </footer>
   );
-}
+};
 
 export default ModalFooter;
