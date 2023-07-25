@@ -8,9 +8,13 @@ import './styles.css';
 const ModalBody: React.FC<ModalBodyProps> = ({
   children,
   className,
-  style
+  style,
 }) => {
-  return <div className={cx('modal__body', className)} style={style}>{children}</div>;
-}
+  return (
+    <div className={cx('modal__body', className)} style={style}>
+      {children}
+    </div>
+  );
+};
 
 export default ModalBody;

@@ -11,20 +11,24 @@ const ModalHeader: React.FC<ModalHeaderProps> = ({
   align = 'center',
   isRegular,
   className,
-  style
+  style,
 }) => {
   return (
     <header
-      className={cx('modal__header', {
-        [`modal__header--title-pos-${titlePosition}`]: titlePosition,
-        [`modal__header--title-alg-${align}`]: align,
-        [`modal__header--regular`]: isRegular
-      }, className)}
+      className={cx(
+        'modal__header',
+        {
+          [`modal__header--title-pos-${titlePosition}`]: titlePosition,
+          [`modal__header--title-alg-${align}`]: align,
+          [`modal__header--regular`]: isRegular,
+        },
+        className
+      )}
       style={style}
     >
       {typeof children === 'string' ? <h3>{children}</h3> : children}
     </header>
   );
-}
+};
 
 export default ModalHeader;

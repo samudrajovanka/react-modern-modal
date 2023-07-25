@@ -17,12 +17,36 @@ const Button = ({ children, onClick }) => {
 
 const App = () => {
   const [isOpen, setIsOpen] = React.useState(false);
+  const [isOpenNestedModal, setIsOpenNestedModal] = React.useState(false);
+  const [isOpenThirdModal, setIsOpenThirdModal] = React.useState(false);
 
   const handleOpenModal = () => {
     setIsOpen(true);
   };
 
   const handleCloseModal = () => {
+    setIsOpen(false);
+  };
+
+  const handleOpenNestedModal = () => {
+    setIsOpenNestedModal(true);
+  };
+
+  const handleCloseNestedModal = () => {
+    setIsOpenNestedModal(false);
+  };
+
+  const handleOpenThirdModal = () => {
+    setIsOpenThirdModal(true);
+  };
+
+  const handleCloseThirdModal = () => {
+    setIsOpenThirdModal(false);
+  };
+
+  const handleCloseAllModal = () => {
+    setIsOpenThirdModal(false);
+    setIsOpenNestedModal(false);
     setIsOpen(false);
   };
 
@@ -131,7 +155,52 @@ const App = () => {
         </ModalBody>
         <ModalFooter>
           <Button onClick={handleCloseModal}>Close</Button>
-          <Button onClick={handleCloseModal}>Add</Button>
+          <Button onClick={handleOpenNestedModal}>Add</Button>
+        </ModalFooter>
+      </Modal>
+
+      <Modal
+        isOpen={isOpenNestedModal}
+        onClose={handleCloseNestedModal}
+        noCloseButton
+        scrollBehaviour="inside"
+        backdropBlur
+      >
+        <ModalHeader titlePosition="top">
+          <h5>Modal Nested</h5>
+        </ModalHeader>
+        <ModalBody>
+          consectetur adipisicing elit. Quasi tempore laboriosam voluptas enim
+          ex totam aspernatur corrupti doloribus obcaecati eligendi, ea ipsam
+          molestias sit ipsum itaque numquam voluptatum libero rerum. Lorem
+          ipsum dolor sit amet consectetur adipisicing elit. Quasi tempore
+        </ModalBody>
+        <ModalFooter>
+          <Button onClick={handleCloseNestedModal}>Close</Button>
+          <Button onClick={handleOpenThirdModal}>Add</Button>
+        </ModalFooter>
+      </Modal>
+
+      <Modal
+        isOpen={isOpenThirdModal}
+        onClose={handleCloseThirdModal}
+        scrollBehaviour="inside"
+        backdropBlur
+        size="lg"
+        preventClose
+      >
+        <ModalHeader titlePosition="top">
+          <h5>Modal Third Nested</h5>
+        </ModalHeader>
+        <ModalBody>
+          consectetur adipisicing elit. Quasi tempore laboriosam voluptas enim
+          ex totam aspernatur corrupti doloribus obcaecati eligendi, ea ipsam
+          molestias sit ipsum itaque numquam voluptatum libero rerum. Lorem
+          ipsum dolor sit amet consectetur adipisicing elit. Quasi tempore
+        </ModalBody>
+        <ModalFooter>
+          <Button onClick={handleCloseThirdModal}>Close</Button>
+          <Button onClick={handleCloseAllModal}>Add</Button>
         </ModalFooter>
       </Modal>
     </div>

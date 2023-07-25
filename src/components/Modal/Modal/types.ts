@@ -63,6 +63,10 @@ export type ModalProps = {
    */
   className?: string;
   /**
+   * Attribute to add your own id
+   */
+  id?: string;
+  /**
    * Attribute to add your own style
    */
   style?: React.CSSProperties;
