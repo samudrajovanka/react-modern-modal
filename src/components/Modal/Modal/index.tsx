@@ -123,7 +123,6 @@ const Modal: React.FC<ModalProps> = ({
       data-unique-id={uniqueId.current}
       style={style}
       id={id}
-      data-testid="modern-modal"
     >
       <div
         className={cx('modal__overlay', {

@@ -6,13 +6,14 @@ import { Modal, ModalBody, ModalFooter, ModalHeader } from '../src';
 describe('Modal', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render((
+    ReactDOM.render(
       <Modal isOpen={false} onClose={() => {}}>
         <ModalHeader>Modal Header</ModalHeader>
         <ModalBody>Modal Body</ModalBody>
         <ModalFooter>Modal Footer</ModalFooter>
-      </Modal>
-    ), div);
+      </Modal>,
+      div
+    );
     ReactDOM.unmountComponentAtNode(div);
   });
 });
